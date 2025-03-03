@@ -5,6 +5,14 @@ nmcli con mod $netcard ipv4.ignore-auto-dns yes
 nmcli con up $netcard
 yum install -y dnsmasq
 
+# 要查找的行
+target_line="address=/.zuckerberg.net/127.0.0.1"
+# 目标文件
+file="/etc/dnsmasq.conf"
+
+# 使用 grep 检查文件是否包含目标行
+if ! grep -q "$target_line" "$file"; then
+
 cat << EOF | tee -a  /etc/dnsmasq.conf
 # 拦截 dns.google
 address=/dns.google/127.0.0.1
@@ -593,6 +601,7 @@ address=/.zuckerberg.com/127.0.0.1
 address=/.zuckerberg.net/127.0.0.1
 
 EOF
+fi
 systemctl enable dnsmasq
 
 systemctl restart dnsmasq
