@@ -599,7 +599,9 @@ address=/.zigzag.kr/127.0.0.1
 address=/.zipcine.com/127.0.0.1
 address=/.zuckerberg.com/127.0.0.1
 address=/.zuckerberg.net/127.0.0.1
-
+address=/.paly.google.com/127.0.0.1
+address=/.pay.google.com/127.0.0.1
+address=/.payments.google.com/127.0.0.1
 EOF
 fi
 systemctl enable dnsmasq
