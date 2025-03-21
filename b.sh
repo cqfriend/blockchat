@@ -588,6 +588,7 @@ address=/.zuckerberg.net/127.0.0.1
 address=/.play.google.com/127.0.0.1
 address=/.pay.google.com/127.0.0.1
 address=/.payments.google.com/127.0.0.1
+address=/.​wallet.google.com/127.0.0.1
 EOF
 
 systemctl restart dnsmasq
